@@ -10,9 +10,9 @@ from googlesearch import *
 from youtubesearchpython import SearchPlaylists
 from youtubesearchpython import SearchVideos
 
-engine = pyttsx3.init('sapi5')
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id)
+system = pyttsx3.init('sapi5')
+voices = system.getProperty('voices')
+system.setProperty('voice', voices[0].id)
 
 exitcmd = ["what is the next plan boss", "are u tired boss", "what is your next destination boss"]
 
@@ -29,8 +29,8 @@ invalid = ["i am sorry boss i did not understand u",
 
 
 def speak(audio):
-    engine.say(audio)
-    engine.runAndWait()
+    system.say(audio)
+    system.runAndWait()
 
 
 def sendEmail(to, content):
