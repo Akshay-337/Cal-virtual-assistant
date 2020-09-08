@@ -42,7 +42,7 @@ def sendEmail(to, content):
     server.close()
 
 
-def wishMe():
+def wish():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
         speak("Good Morning boss")
@@ -55,7 +55,7 @@ def wishMe():
 
     speak("I am cal ! Please tell me how may I help you")
 if __name__ == "__main__":
-    wishMe()
+    wish()
     while True:
         query = input("enter command--").lower()
         if 'wikipedia' in query:
